@@ -12,4 +12,4 @@ Run:
 7. open localhost:3000 in the browser of your preference
 
 
-enojoy!
+enjoy!
