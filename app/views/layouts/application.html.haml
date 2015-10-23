@@ -1,0 +1,26 @@
+!!!
+%html
+%head
+  %title Fussball Funball
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body
+  %nav.navbar.navbar-default
+    .container
+      .navbar-brand Fussball Funball
+      %ul.nav.navbar-nav
+        %li= link_to "All Players", root_path
+        %li= link_to "All Teams", teams_path
+        %li= link_to "All Games", games_path
+        %li= link_to "All Matches", matches_path
+        %br/
+
+      = link_to "New Player", new_user_path, class: "navbar-text navbar-right navbar-link"
+      = link_to "New Team", new_team_path, class: "navbar-text navbar-right navbar-link"
+      = link_to "New Game", new_game_path, class: "navbar-text navbar-right navbar-link"
+      = link_to "New Match", new_match_path, class: "navbar-text navbar-right navbar-link"
+  .container
+    .col-md-6.col-md-offset-3
+      = yield
