@@ -1,6 +1,17 @@
 #team
   .team
     %h1= @team.name
+    .row
+      .col-sm-3
+        Wins
+      .col-sm-9
+        %h1= @team.games_won
+    .row
+      .col-sm-3
+        Losses
+      .col-sm-9
+        %h1= @team.games_lost
+
 #links
   = link_to "Back", teams_path, class: "btn btn-sm btn-default"
   = link_to "Edit", edit_team_path(@team), class: "btn btn-sm btn-default"

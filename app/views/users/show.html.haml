@@ -5,7 +5,21 @@
         Team
       .col-sm-9
         %h1= @user.team.name
-    %p= @user.first_name + ' ' + @user.last_name
+    .row
+      .col-sm-3
+        Name
+      .col-sm-9
+        %p= @user.first_name + ' ' + @user.last_name
+    .row
+      .col-sm-3
+        Wins
+      .col-sm-9
+        %h1= @user.games_won
+    .row
+      .col-sm-3
+        Losses
+      .col-sm-9
+        %p= @user.games_lost
 
 
 #links
