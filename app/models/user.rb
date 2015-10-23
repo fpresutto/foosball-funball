@@ -7,4 +7,10 @@ class User < ActiveRecord::Base
   delegate :percentage_games_won, to: :team
   delegate :percentage_games_lost, to: :team
 
+  validate :maximum_users
+
+  def maximum_users
+    self.errors.add(:base, 'Maximum 2 players per team!') if self.team.users.count >= 2
+  end
+
 end
