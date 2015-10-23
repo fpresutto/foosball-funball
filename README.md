@@ -4,11 +4,10 @@ For the proper accounting of triumphs in the glorious endeavor of semi-professio
 
 1. Uses Ruby 2.2.1, Rails 4.2.4, & Postgresql
 2. Git clone project
-Run:
-3. gem install bundler
-4. bundle install
-5. rake db:setup db:migrate
-6. rails s
+3. run 'gem install bundler'
+4. run 'bundle install'
+5. run 'rake db:setup db:migrate'
+6. run 'rails s'
 7. open localhost:3000 in the browser of your preference
 
 
