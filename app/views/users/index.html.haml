@@ -1,0 +1,7 @@
+%h1 All Players
+#users
+  - @users.each do |user|
+    .user
+      %h2= link_to user.first_name, user
+      %p= user.last_name
+

@@ -1,0 +1,11 @@
+#user
+  .user
+    %h1= @user.team.name
+    %p= @user.first_name
+    %p= @user.last_name
+
+
+#links
+  = link_to "Back", root_path, class: "btn btn-sm btn-default"
+  = link_to "Edit", edit_user_path(@user), class: "btn btn-sm btn-default"
+  = link_to "Delete", user_path(@user), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-default"
