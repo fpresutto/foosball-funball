@@ -1,0 +1,7 @@
+#team
+  .team
+    %h1= @team.name
+#links
+  = link_to "Back", teams_path, class: "btn btn-sm btn-default"
+  = link_to "Edit", edit_team_path(@team), class: "btn btn-sm btn-default"
+  = link_to "Delete", team_path(@team), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-default"

@@ -1,0 +1,6 @@
+%h1 All Teams
+#teams
+  - @teams.each do |team|
+    .team
+      %h2= link_to team.name, team
+
