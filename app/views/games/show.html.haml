@@ -1,0 +1,26 @@
+#game
+  .game
+    .row
+      .col-sm-3
+        Winning Team
+      .col-sm-9
+        %h1= Team.find(team_id = @game.winning_team_id).name
+    .row
+      .col-sm-3
+        Winning Score
+      .col-sm-9
+        %h1= @game.winning_team_score
+    .row
+      .col-sm-3
+        Losing Team
+      .col-sm-9
+        %p= Team.find(team_id = @game.losing_team_id).name
+    .row
+      .col-sm-3
+        Losing Score
+      .col-sm-9
+        %p= @game.losing_team_score
+#links
+  = link_to "Back", games_path, class: "btn btn-sm btn-default"
+  = link_to "Edit", edit_game_path(@game), class: "btn btn-sm btn-default"
+  = link_to "Delete", game_path(@game), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-default"

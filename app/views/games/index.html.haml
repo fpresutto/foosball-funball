@@ -1,0 +1,13 @@
+%h1 Games Played
+#games
+  - @games.each do |game|
+    .game
+      .row
+        .col-sm-3
+          Game #
+        .col-sm-3
+          %h2= link_to game.id, game
+        .col-sm-6
+          Game Winner
+        .col-sm-6
+          %h2= Team.find(team_id = game.winning_team_id).name
