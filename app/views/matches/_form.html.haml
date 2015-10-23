@@ -1,0 +1,10 @@
+= simple_form_for(@match, html: { class: 'form-horizontal'}) do |f|
+  = f.collection_select :winning_team, Team.all, :id, :name, { prompt: "Choose the winning team of this match"}, input_html: {class: "dropdown-toggle"}
+  %br/
+  = f.collection_select :first_game_id, Game.all, :id, :id, { prompt: "Choose the first game of this match"}, input_html: {class: "dropdown-toggle"}
+  %br/
+  = f.collection_select :second_game_id, Game.all, :id, :id, { prompt: "Choose the second game of this match"}, input_html: {class: "dropdown-toggle"}
+  %br/
+  = f.collection_select :third_game_id, Game.all, :id, :id, { prompt: "Choose the third game (if any) of this match"}, input_html: {class: "dropdown-toggle"}
+  %br/
+  =f.button :submit
