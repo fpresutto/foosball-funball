@@ -14,12 +14,12 @@
       .col-sm-3
         Wins
       .col-sm-9
-        %h1= @user.games_won
+        %h1= "#{@user.games_won}, or #{number_with_precision(@user.percentage_games_won, :precision => 2)}% of games played won"
     .row
       .col-sm-3
         Losses
       .col-sm-9
-        %p= @user.games_lost
+        %p= "#{@user.games_lost}, or #{number_with_precision(@user.percentage_games_lost, :precision => 2)}% of games played lost"
 
 
 #links

@@ -11,4 +11,12 @@ class Team < ActiveRecord::Base
   def games_lost
     Game.where(losing_team_id: id).count
   end
+
+  def percentage_games_won
+    (games_won.to_f / (games_won.to_f + games_lost.to_f))*100
+  end
+
+  def percentage_games_lost
+    (games_lost.to_f / (games_won.to_f + games_lost.to_f))*100
+  end
 end
