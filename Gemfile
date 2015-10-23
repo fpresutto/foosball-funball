@@ -25,6 +25,7 @@ group :development, :test do
   gem 'inch', '~> 0.5.0', require: false
   gem 'ffaker', '~> 2.0'
   gem 'dotenv-rails', '~> 2.0'
+  gem 'bootstrap-sass'
 end
 
 group :development do
