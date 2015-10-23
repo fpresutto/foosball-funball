@@ -13,9 +13,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'slim', '~> 3.0'
 gem 'simple_form', '~> 3.0'
 gem 'haml'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
@@ -26,7 +26,6 @@ group :development, :test do
   gem 'inch', '~> 0.5.0', require: false
   gem 'ffaker', '~> 2.0'
   gem 'dotenv-rails', '~> 2.0'
-  gem 'bootstrap-sass'
 end
 
 group :development do
