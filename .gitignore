@@ -11,3 +11,18 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Mac finder artifacts
+  .DS_Store
+
+# RSpec artifacts
+.rspec
+/spec/tmp/*
+
+# Bower components
+/bower_components
+/vendor/assets/bower_components
+
+# various artifacts
+/config/database.yml
+
