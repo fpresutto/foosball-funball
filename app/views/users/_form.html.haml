@@ -1,4 +1,5 @@
 = simple_form_for(@user, html: { class: 'form-horizontal'}) do |f|
+  = f.error_notification
   = f.collection_select :team_id, Team.all, :id, :name, { prompt: "Choose a team"}, input_html: {class: "dropdown-toggle"}
   = f.input :first_name, label: "Player First Name"
   = f.input :last_name, label: "Player Last Name"
