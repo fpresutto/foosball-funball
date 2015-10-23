@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim', '~> 3.0'
 gem 'simple_form', '~> 3.0'
+gem 'haml'
 
 group :development, :test do
   gem 'byebug'
