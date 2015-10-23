@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user
     else
-      render "New"
+      render "new"
     end
   end
 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     if @user.update(users_params)
       redirect_to @user
     else
-      render "Edit"
+      render "edit"
     end
   end
 

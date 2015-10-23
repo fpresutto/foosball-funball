@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :find_game, only: [:show]
+  before_action :find_game, only: [:show, :edit, :update, :destroy]
 
   def index
     @games = Game.all.order("created_at DESC")
@@ -18,7 +18,7 @@ class GamesController < ApplicationController
     if @game.save
       redirect_to @game
     else
-      render "New"
+      render "new"
     end
   end
 
@@ -29,7 +29,7 @@ class GamesController < ApplicationController
     if @game.update(games_params)
       redirect_to @game
     else
-      render "Edit"
+      render "edit"
     end
   end
 

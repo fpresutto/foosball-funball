@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-  before_action :find_team, only: [:show]
+  before_action :find_team, only: [:show, :edit, :update, :destroy]
 
   def index
     @teams = Team.all.order("created_at DESC")
@@ -18,7 +18,7 @@ class TeamsController < ApplicationController
     if @team.save
       redirect_to @team
     else
-      render "New"
+      render "new"
     end
   end
 
@@ -29,7 +29,7 @@ class TeamsController < ApplicationController
     if @team.update(teams_params)
       redirect_to @team
     else
-      render "Edit"
+      render "edit"
     end
   end
 

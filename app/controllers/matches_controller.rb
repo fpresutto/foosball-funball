@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  before_action :find_team, only: [:show]
+  before_action :find_team, only: [:show, :edit, :update, :destroy]
 
   def index
     @matches = Match.all.order("created_at DESC")
@@ -18,7 +18,7 @@ class MatchesController < ApplicationController
     if @match.save
       redirect_to @match
     else
-      render "New"
+      render "new"
     end
   end
 
@@ -29,7 +29,7 @@ class MatchesController < ApplicationController
     if @match.update(matches_params)
       redirect_to @match
     else
-      render "Edit"
+      render "edit"
     end
   end
 
