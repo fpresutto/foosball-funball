@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  before_action :find_team, only: [:show, :edit, :update, :destroy]
+  before_action :find_match, only: [:show, :edit, :update, :destroy]
 
   def index
     @matches = Match.all.order("created_at DESC")
